@@ -1,23 +1,18 @@
 # Find an Euclidian distance between (2, 3) and (10, 8)
+import math
 
 
-# Calculate the Square root
-def sqr(x):
-    a = 1
-    compe = 0
-    while a < 1000:
-        compe = a * a
-        if x - compe == 0:
-            return a
-        else:
-            a += 1
-    return f"Cannot find the square root of {x} "
+def d(var):
+    x1 = var[0][0]
+    y1 = var[0][1]
+    x2 = var[1][0]
+    y2 = var[1][1]
+    pre_result = (x2 - x1) ** 2 + (y2 - y1) ** 2
+    result = math.sqrt(pre_result)
+    return f"The Euclidian Distance between {var[0]} and {var[1]} is √{pre_result} or ~{result}"
 
-def distance(p,q):
-    calc = (p-q) ** 2
-    return sqr(calc)
 
-print(distance(2,3))
-print(distance(10,8))
-
-print(sqr(89))
+print(d([(2, 3), (10, 8)]))
+print(d([(3, 4), (7, 1)]))
+print(d([(0, 0), (10, 10)]))
+print("End of program.")
