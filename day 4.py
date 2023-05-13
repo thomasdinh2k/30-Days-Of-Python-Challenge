@@ -50,4 +50,4 @@ def Exercise_35(radius):
     print('The area of circle with radius {} is {} meters square'.format(str(radius), int(area)))
 
 
-print("Day 4 completed!")
+print("Day 4 complete!")
