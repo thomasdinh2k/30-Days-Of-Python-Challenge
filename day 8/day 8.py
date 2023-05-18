@@ -89,16 +89,20 @@ student = {
   "city": "Los Angeles",
   "address": "456 Elm Street"
 }
+test = False
 
-print(len(student))
-student["skills"] += ["biology", "chemistry"]   # Short-cut for append-method
-print(student)
+if test is True:
+  print(len(student))
+  student["skills"] += ["biology", "chemistry"]   # Short-cut for append-method
+  print(student)
 
-print(student.keys())
-print(student.values())
-print(student.items())
+  print(student.keys())
+  print(student.values())
+  print(student.items())
 
-student.pop("first_name")
-print(student)
-del student
-print(student)
+  student.pop("first_name")
+  print(student)
+  del student
+  print(student)
+
+print("Day 8 completed!")

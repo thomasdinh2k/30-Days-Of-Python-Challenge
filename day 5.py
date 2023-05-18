@@ -104,9 +104,7 @@ def calc_age(age_lst=ages):
         print(f"(min - average) < (max- average)")
 
 
-import sys
-sys.path.append("/Users/thomas/PycharmProjects/30-Days-Of-Python-Challenge/InteractiveData/")
-from country import countries
+from InteractiveData.country import countries
 
 if test is True:
     print(countries)
