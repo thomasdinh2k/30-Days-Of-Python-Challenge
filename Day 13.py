@@ -36,15 +36,8 @@ def list_of_string():
     print([' '.join(item) for row in names for item in row])
 
 
-def linear_functions(equation='y = 20x + 103'):
-    terms = equation.split()
-    a = terms[2][:-1]
-    b = terms[4]
-    print(f"Slope = {a}\nY-intercept= {b}")
+def linear_function(x1, y1, x2, y2):
+    return lambda option: (y2 - y1) / (x2 - x1) if option == 'slope' else y1 - (x1 * (y2 - y1) / (x2 - x1))
 
+print("Day 13 Completed!")
 
-linear_solver = lambda equation, variable: eval(equation.replace(variable, 'x'))
-
-slope = linear_solver('y = 20x + 103', 'slope')
-
-print(slope)
